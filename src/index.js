@@ -39,10 +39,10 @@ function getQuery(params) {
   if (!isEmpty(sort)) {
     query.sort = sortValue(sort)
   }
-  if (!isEmpty(page)) {
+  if (page) {
     query.page = page - 1
   }
-  if (!isEmpty(perPage)) {
+  if (perPage) {
     query.count = perPage 
   }
   return query
